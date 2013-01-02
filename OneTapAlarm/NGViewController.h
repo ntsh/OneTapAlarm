@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <math.h>
 
 @interface NGViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
