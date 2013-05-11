@@ -11,6 +11,7 @@
 #import <math.h>
 
 @interface NGViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+
+-(void) handleTouch:(CGPoint)touchLocation;
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B121EE7A16B02E0400E739AC /* background i5.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7616B02E0400E739AC /* background i5.png */; };
+		B121EE7B16B02E0400E739AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7716B02E0400E739AC /* background.png */; };
+		B121EE7D16B02E0400E739AC /* gola.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7916B02E0400E739AC /* gola.png */; };
+		B121EE8016B02E7A00E739AC /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7F16B02E7A00E739AC /* Clock.png */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
 		B190141C168F015100B5E183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190141B168F015100B5E183 /* CoreGraphics.framework */; };
@@ -16,14 +20,16 @@
 		B190142A168F015200B5E183 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B1901429168F015200B5E183 /* Default.png */; };
 		B190142C168F015200B5E183 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B190142B168F015200B5E183 /* Default@2x.png */; };
 		B190142E168F015200B5E183 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B190142D168F015200B5E183 /* Default-568h@2x.png */; };
-		B1901431168F015200B5E183 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B190142F168F015200B5E183 /* MainStoryboard_iPhone.storyboard */; };
-		B1901434168F015200B5E183 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1901432168F015200B5E183 /* MainStoryboard_iPad.storyboard */; };
 		B1901437168F015200B5E183 /* NGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1901436168F015200B5E183 /* NGViewController.m */; };
 		B190143E168F082500B5E183 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190143D168F082500B5E183 /* QuartzCore.framework */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B121EE7616B02E0400E739AC /* background i5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background i5.png"; sourceTree = "<group>"; };
+		B121EE7716B02E0400E739AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		B121EE7916B02E0400E739AC /* gola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gola.png; sourceTree = "<group>"; };
+		B121EE7F16B02E7A00E739AC /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1901419168F015100B5E183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,8 +43,6 @@
 		B1901429168F015200B5E183 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B190142B168F015200B5E183 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B190142D168F015200B5E183 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B1901430168F015200B5E183 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		B1901433168F015200B5E183 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		B1901435168F015200B5E183 /* NGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGViewController.h; sourceTree = "<group>"; };
 		B1901436168F015200B5E183 /* NGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGViewController.m; sourceTree = "<group>"; };
 		B190143D168F082500B5E183 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -93,8 +97,6 @@
 			children = (
 				B1901426168F015200B5E183 /* NGAppDelegate.h */,
 				B1901427168F015200B5E183 /* NGAppDelegate.m */,
-				B190142F168F015200B5E183 /* MainStoryboard_iPhone.storyboard */,
-				B1901432168F015200B5E183 /* MainStoryboard_iPad.storyboard */,
 				B1901435168F015200B5E183 /* NGViewController.h */,
 				B1901436168F015200B5E183 /* NGViewController.m */,
 				B190141E168F015100B5E183 /* Supporting Files */,
@@ -105,6 +107,10 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B121EE7F16B02E7A00E739AC /* Clock.png */,
+				B121EE7616B02E0400E739AC /* background i5.png */,
+				B121EE7716B02E0400E739AC /* background.png */,
+				B121EE7916B02E0400E739AC /* gola.png */,
 				B1FB3B501694199C00B86EB0 /* sun.png */,
 				B190141F168F015100B5E183 /* OneTapAlarm-Info.plist */,
 				B1901420168F015100B5E183 /* InfoPlist.strings */,
@@ -173,9 +179,11 @@
 				B190142A168F015200B5E183 /* Default.png in Resources */,
 				B190142C168F015200B5E183 /* Default@2x.png in Resources */,
 				B190142E168F015200B5E183 /* Default-568h@2x.png in Resources */,
-				B1901431168F015200B5E183 /* MainStoryboard_iPhone.storyboard in Resources */,
-				B1901434168F015200B5E183 /* MainStoryboard_iPad.storyboard in Resources */,
 				B1FB3B511694199C00B86EB0 /* sun.png in Resources */,
+				B121EE7A16B02E0400E739AC /* background i5.png in Resources */,
+				B121EE7B16B02E0400E739AC /* background.png in Resources */,
+				B121EE7D16B02E0400E739AC /* gola.png in Resources */,
+				B121EE8016B02E7A00E739AC /* Clock.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,22 +209,6 @@
 				B1901421168F015100B5E183 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B190142F168F015200B5E183 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1901430168F015200B5E183 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		B1901432168F015200B5E183 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1901433168F015200B5E183 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
