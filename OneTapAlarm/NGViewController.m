@@ -7,6 +7,7 @@
 //
 
 #import "NGViewController.h"
+#import "NGTime.h"
 
 @interface NGViewController ()
 
@@ -116,7 +117,7 @@ UIView *golaParent;
     float touchx = touchLocation.x;
     float touchy = touchLocation.y;
     float theta = atan2(touchx - clockCenterX, clockCenterY - touchy);
-    float hour_hand = 6 / M_PI * theta ;
+    float hour_hand = 6 / M_PI * theta ; 
     if (hour_hand < 1)
     {
         hour_hand = hour_hand + 12;
@@ -140,6 +141,7 @@ UIView *golaParent;
         time_min = 0;
         time_hour = time_hour + 1;
     }
+    if (time_hour == 13) time_hour = 1;
     timeLabel.text = [NSString stringWithFormat:@"%d:%02d",
                                     time_hour,(int)time_min];
     
@@ -167,6 +169,9 @@ UIView *golaParent;
                                 }
             ];
     
+    NGTime *time = [NGTime alloc];
+    [time setTime:5 :10];
+    NSLog(@"%@",[time getTime]);
     
     
     /*golaView.layer.anchorPoint = self.view.center;
