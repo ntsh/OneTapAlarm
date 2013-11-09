@@ -11,6 +11,7 @@
 		B121EE7B16B02E0400E739AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7716B02E0400E739AC /* background.png */; };
 		B121EE7D16B02E0400E739AC /* gola.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7916B02E0400E739AC /* gola.png */; };
 		B121EE8016B02E7A00E739AC /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7F16B02E7A00E739AC /* Clock.png */; };
+		B161AF82182E9E0D00611941 /* NGTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF81182E9E0D00611941 /* NGTime.m */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
 		B190141C168F015100B5E183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190141B168F015100B5E183 /* CoreGraphics.framework */; };
@@ -30,6 +31,8 @@
 		B121EE7716B02E0400E739AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		B121EE7916B02E0400E739AC /* gola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gola.png; sourceTree = "<group>"; };
 		B121EE7F16B02E7A00E739AC /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
+		B161AF80182E9E0D00611941 /* NGTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGTime.h; path = classes/NGTime.h; sourceTree = "<group>"; };
+		B161AF81182E9E0D00611941 /* NGTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGTime.m; path = classes/NGTime.m; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1901419168F015100B5E183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 				B1901435168F015200B5E183 /* NGViewController.h */,
 				B1901436168F015200B5E183 /* NGViewController.m */,
 				B190141E168F015100B5E183 /* Supporting Files */,
+				B161AF80182E9E0D00611941 /* NGTime.h */,
+				B161AF81182E9E0D00611941 /* NGTime.m */,
 			);
 			path = OneTapAlarm;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				B1901424168F015200B5E183 /* main.m in Sources */,
 				B1901428168F015200B5E183 /* NGAppDelegate.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
+				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +229,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -238,6 +245,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -252,6 +261,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -260,6 +270,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
