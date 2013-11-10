@@ -12,6 +12,7 @@
 		B121EE7D16B02E0400E739AC /* gola.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7916B02E0400E739AC /* gola.png */; };
 		B121EE8016B02E7A00E739AC /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7F16B02E7A00E739AC /* Clock.png */; };
 		B161AF82182E9E0D00611941 /* NGTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF81182E9E0D00611941 /* NGTime.m */; };
+		B161AF85182F7BC400611941 /* NGClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF84182F7BC400611941 /* NGClockView.m */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
 		B190141C168F015100B5E183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190141B168F015100B5E183 /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 		B121EE7F16B02E7A00E739AC /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
 		B161AF80182E9E0D00611941 /* NGTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGTime.h; path = classes/NGTime.h; sourceTree = "<group>"; };
 		B161AF81182E9E0D00611941 /* NGTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGTime.m; path = classes/NGTime.m; sourceTree = "<group>"; };
+		B161AF83182F7BC400611941 /* NGClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClockView.h; path = classes/NGClockView.h; sourceTree = "<group>"; };
+		B161AF84182F7BC400611941 /* NGClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGClockView.m; path = classes/NGClockView.m; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1901419168F015100B5E183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				B190141E168F015100B5E183 /* Supporting Files */,
 				B161AF80182E9E0D00611941 /* NGTime.h */,
 				B161AF81182E9E0D00611941 /* NGTime.m */,
+				B161AF83182F7BC400611941 /* NGClockView.h */,
+				B161AF84182F7BC400611941 /* NGClockView.m */,
 			);
 			path = OneTapAlarm;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				B1901428168F015200B5E183 /* NGAppDelegate.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
 				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
+				B161AF85182F7BC400611941 /* NGClockView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

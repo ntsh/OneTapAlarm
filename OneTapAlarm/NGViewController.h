@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
+#import "NGClockView.h"
 
 @interface NGViewController : UIViewController
 

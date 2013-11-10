@@ -49,22 +49,19 @@ UIView *golaParent;
     
     //Adding clock image
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    UIImage *imgClock = [UIImage imageNamed:@"Clock"];
-    clockView = [[UIImageView alloc] initWithFrame:imageRect];
-    [clockView setImage:imgClock];
-    [clockView setBounds:imageRect];
-    clockView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:clockView];
+    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect andRadius:R];
+    [self.view addSubview:clockV];
+
     
     //Adding clock time pointer circle
-    golaParent = [[UIView alloc]initWithFrame:imageRect];
+    /*golaParent = [[UIView alloc]initWithFrame:imageRect];
     golaView = [[UIImageView alloc] initWithFrame:CGRectMake( 4, 4, 25, 25)];
     golaView.image = [UIImage imageNamed:@"gola"];
     golaView.contentMode = UIViewContentModeScaleAspectFit;
     //golaView.center = CGPointMake(clockCenterX,clockCenterY - (R-24));
     golaView.center = CGPointMake(R,24);
     [golaParent addSubview:golaView];
-    [self.view addSubview: golaParent];
+    [self.view addSubview: golaParent];*/
     
     //setting Font for time text
     UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
