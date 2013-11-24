@@ -14,5 +14,6 @@
 @interface NGViewController : UIViewController
 
 -(void) handleTouch:(CGPoint)touchLocation;
+-(void) handleTouchClock:(NGClockView*)clockView;
 
 @end

@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NGClockView : UIView
 
-- (id)initWithFrame:(CGRect)frame andRadius:(int)radius;
+@interface NGClockView : UIView {
+    id delegate;
+}
+
+- (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate;
+
+@end
+
+@protocol handleTouchDelegate <NSObject>
+
+-(void) handleTouchClock:self;
 
 @end

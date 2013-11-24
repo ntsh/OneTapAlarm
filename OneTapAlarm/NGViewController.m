@@ -49,7 +49,7 @@ UIView *golaParent;
     
     //Adding clock image
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect andRadius:R];
+    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect andRadius:R delegate:self];
     [self.view addSubview:clockV];
 
     
@@ -208,5 +208,20 @@ UIView *golaParent;
     // Add the animation to the views layer
     [[view layer] addAnimation:rotationAnimation
                         forKey:@"rotateAroundAnchorPoint"];
+}
+
+- (void)handleTouchClock:(NGClockView *)clockView {
+    [UIView animateWithDuration:1.0f
+                          delay:0.5f
+                        options:UIViewAnimationCurveEaseIn
+                     animations:^{
+                         [alarmStatus setAlpha:1.0f];
+                             //clockView.transform = CGAffineTransformMakeRotation(theta);
+                     }
+                     completion:^(BOOL finished)
+                    {
+                        [alarmStatus setOn:YES animated:YES];
+                    }];
+
 }
 @end

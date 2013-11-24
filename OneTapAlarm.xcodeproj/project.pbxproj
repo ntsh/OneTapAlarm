@@ -105,11 +105,11 @@
 				B1901427168F015200B5E183 /* NGAppDelegate.m */,
 				B1901435168F015200B5E183 /* NGViewController.h */,
 				B1901436168F015200B5E183 /* NGViewController.m */,
-				B190141E168F015100B5E183 /* Supporting Files */,
 				B161AF80182E9E0D00611941 /* NGTime.h */,
 				B161AF81182E9E0D00611941 /* NGTime.m */,
 				B161AF83182F7BC400611941 /* NGClockView.h */,
 				B161AF84182F7BC400611941 /* NGClockView.m */,
+				B190141E168F015100B5E183 /* Supporting Files */,
 			);
 			path = OneTapAlarm;
 			sourceTree = "<group>";

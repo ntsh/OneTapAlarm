@@ -10,10 +10,10 @@
 
 @implementation NGClockView
 
-- (id)initWithFrame:(CGRect)frame andRadius:(int)radius
-{
+- (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate {
     UIImageView *clockView;
     self = [super initWithFrame:frame];
+    delegate = aDelegate;
     if (self) {
         CGRect imageRect = CGRectMake(0, 0, 2*radius, 2*radius);
         UIImage *imgClock = [UIImage imageNamed:@"Clock"];
@@ -30,6 +30,7 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView:self];
     NSLog(@"View: %f,%f",touchLocation.x, touchLocation.y);
+    [delegate handleTouchClock:self];
 }
 
 /*
