@@ -16,7 +16,7 @@
 }
 
 - (NSString*) getTime {
-    NSString *timeFormatted = [NSString stringWithFormat:@"%d:%d",self.hour,self.minute];
+    NSString *timeFormatted = [NSString stringWithFormat:@"%d:%02d",self.hour,self.minute];
     return timeFormatted;
 }
 

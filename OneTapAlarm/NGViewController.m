@@ -51,17 +51,6 @@ UIView *golaParent;
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
     NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect andRadius:R delegate:self];
     [self.view addSubview:clockV];
-
-    
-    //Adding clock time pointer circle
-    /*golaParent = [[UIView alloc]initWithFrame:imageRect];
-    golaView = [[UIImageView alloc] initWithFrame:CGRectMake( 4, 4, 25, 25)];
-    golaView.image = [UIImage imageNamed:@"gola"];
-    golaView.contentMode = UIViewContentModeScaleAspectFit;
-    //golaView.center = CGPointMake(clockCenterX,clockCenterY - (R-24));
-    golaView.center = CGPointMake(R,24);
-    [golaParent addSubview:golaView];
-    [self.view addSubview: golaParent];*/
     
     //setting Font for time text
     UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
@@ -222,6 +211,7 @@ UIView *golaParent;
                     {
                         [alarmStatus setOn:YES animated:YES];
                     }];
+    NSLog(@"Setting Alarm for time: %@",[[clockView time]getTime]);
 
 }
 @end
