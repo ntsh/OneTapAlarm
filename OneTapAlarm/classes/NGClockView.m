@@ -39,6 +39,13 @@
     return;
 }
 
+-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInView:self];
+    [self handleTouch:touchLocation];
+}
+
 - (void)handleTouch:(CGPoint) touchLocation {
     NGTime *time = [self getTimeFromCoordinates:touchLocation];
     [self setTime:time];
@@ -107,7 +114,7 @@
     [[self.golaView layer] setAnchorPoint:CGPointMake(0.5, 0.5)];
 
     [UIView animateWithDuration:1.0f
-                          delay:0.5f
+                          delay:0.0f
                         options:UIViewAnimationCurveEaseIn
                      animations:^{
                          self.golaParent.transform = CGAffineTransformMakeRotation(self.theta);

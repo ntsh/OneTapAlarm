@@ -7,7 +7,6 @@
 //
 
 #import "NGViewController.h"
-#import "NGTime.h"
 
 @interface NGViewController ()
 
@@ -33,48 +32,10 @@ UIView *golaParent;
 
 -(void) loadView
 {
-    //Adding View
-    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
-    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
-    contentView.backgroundColor = [UIColor whiteColor];
-    self.view = contentView;
-    self.view.backgroundColor = [UIColor colorWithPatternImage:
-                                    [UIImage imageNamed:@"background.png"]];
-    
-    int screenHeight = self.view.bounds.size.height;
-    clockCenterX = [UIScreen mainScreen].bounds.size.width/2;
-    clockCenterY = screenHeight/2;
-    NSLog(@"clockCenterY = %d, screenheight = %d, scr2 = %f",
-            clockCenterY,screenHeight,self.view.bounds.size.height);
-    
-    //Adding clock image
-    CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect andRadius:R delegate:self];
-    [self.view addSubview:clockV];
-    
-    //setting Font for time text
-    UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
-    textColor = [UIColor colorWithRed:0.5255 green:0.255 blue:0.255 alpha:1.0];
-    //Adding timeLabel
-    timeLabel = [[UILabel alloc] initWithFrame:
-                    CGRectMake(clockCenterX - 60,clockCenterY - 40, 120, 80)];
-    timeLabel.text = @"12:00";
-    timeLabel.backgroundColor = [UIColor clearColor];
-    timeLabel.font = textFont;
-    timeLabel.textAlignment = NSTextAlignmentCenter;
-    timeLabel.textColor = [UIColor colorWithRed:0.5255
-                                          green:0.255
-                                           blue:0.255
-                                          alpha:1.0];
-    [self.view addSubview:timeLabel];
-    
-    //Adding On Off switch
-    alarmStatus = [[UISwitch alloc] initWithFrame:CGRectMake
-                        (clockCenterX - 40, clockCenterY + R +50, 100, 40)];
-    [alarmStatus setOnTintColor:textColor];
-    [alarmStatus setAlpha:0.0];
-    [self.view addSubview:alarmStatus];
-    
+    [self setBackground];
+    [self addClock];
+    [self addTimeLabel];
+    [self addAlarmSwitch];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,81 +46,19 @@ UIView *golaParent;
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView:self.view];
-    [self handleTouch:touchLocation];
 }
 
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView:self.view];
-    [self handleTouch:touchLocation];
 }
 
 -(void) handleTouch:(CGPoint)touchLocation
 {
-    NSLog(@"touched at %f,%f",touchLocation.x,touchLocation.y);
-    float touchx = touchLocation.x;
-    float touchy = touchLocation.y;
-    float theta = atan2(touchx - clockCenterX, clockCenterY - touchy);
-    float hour_hand = 6 / M_PI * theta ; 
-    if (hour_hand < 1)
-    {
-        hour_hand = hour_hand + 12;
-    }
-    int time_hour = (int) hour_hand;
-    float time_min = 0.6 * ((hour_hand * 100) - (time_hour * 100));
-    float fraction = time_min /5;
-    int integertime = time_min/5;
-    float part = fraction-integertime;
-    int modvalue = part*5;
-    if(modvalue > 2)
-    {
-        time_min = time_min+(5-modvalue);
-    }
-    else
-    {
-        time_min=time_min-modvalue;
-    }
-    if ((int)time_min == 60)
-    {
-        time_min = 0;
-        time_hour = time_hour + 1;
-    }
-    if (time_hour == 13) time_hour = 1;
-    timeLabel.text = [NSString stringWithFormat:@"%d:%02d",
-                                    time_hour,(int)time_min];
-    
-    int circumPointX = clockCenterX + (R-24) * sin(theta);
-    int circumPointY = clockCenterY - (R-24) * cos(theta);
-    //golaView.center = CGPointMake(circumPointX, circumPointY);
-    
-    
-    //golaView.transform = CGAffineTransformMakeRotation(theta);
-    
-    //CGPoint *anchor = CGPointMake(<#CGFloat x#>, <#CGFloat y#>)
-    [[golaView layer] setAnchorPoint:CGPointMake(0.5, 0.5)];
-    
-    [UIView animateWithDuration:1.0f
-                          delay:0.5f
-                        options:UIViewAnimationCurveEaseIn
-                     animations:^{
-                         [alarmStatus setAlpha:1.0f];
-                         golaParent.transform = CGAffineTransformMakeRotation(theta);
-                         //clockView.transform = CGAffineTransformMakeRotation(theta);
-                     }
-                     completion:^(BOOL finished)
-                                {
-                                     [alarmStatus setOn:YES animated:YES];
-                                }
-            ];
-    
     NGTime *time = [NGTime alloc];
     [time setTime:5 :10];
     NSLog(@"%@",[time getTime]);
-    
-    
+    timeLabel.text = [NSString stringWithFormat:@"%@",[time getTime]];
+
     /*golaView.layer.anchorPoint = self.view.center;
     golaView.center  = CGPointMake(clockCenterX,clockCenterY - (R-24));;
     CATransform3D rotatedTransform = golaView.layer.transform;
@@ -199,6 +98,58 @@ UIView *golaParent;
                         forKey:@"rotateAroundAnchorPoint"];
 }
 
+- (void)setBackground {
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    UIView *contentView = [[UIView alloc] initWithFrame:applicationFrame];
+    contentView.backgroundColor = [UIColor whiteColor];
+    self.view = contentView;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:
+                                 [UIImage imageNamed:@"background.png"]];
+    return;
+}
+
+- (void)addClock {
+    int screenHeight = self.view.bounds.size.height;
+    clockCenterX = [UIScreen mainScreen].bounds.size.width/2;
+    clockCenterY = screenHeight/2;
+    NSLog(@"clockCenterY = %d, screenheight = %d, scr2 = %f",
+          clockCenterY,screenHeight,self.view.bounds.size.height);
+
+    //Adding clock image
+    CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
+    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect
+                                                   andRadius:R
+                                                    delegate:self];
+    [self.view addSubview:clockV];
+    return;
+}
+
+- (void)addTimeLabel {
+    UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
+    textColor = [UIColor colorWithRed:0.5255 green:0.255 blue:0.255 alpha:1.0];
+    //Adding timeLabel
+    timeLabel = [[UILabel alloc] initWithFrame:
+                 CGRectMake(clockCenterX - 60,clockCenterY - 40, 120, 80)];
+    timeLabel.text = @"12:00";
+    timeLabel.backgroundColor = [UIColor clearColor];
+    timeLabel.font = textFont;
+    timeLabel.textAlignment = NSTextAlignmentCenter;
+    timeLabel.textColor = [UIColor colorWithRed:0.5255
+                                          green:0.255
+                                           blue:0.255
+                                          alpha:1.0];
+    [self.view addSubview:timeLabel];
+}
+
+- (void)addAlarmSwitch {
+    alarmStatus = [[UISwitch alloc] initWithFrame:CGRectMake
+                   (clockCenterX - 40, clockCenterY + R +50, 100, 40)];
+    [alarmStatus setOnTintColor:textColor];
+    [alarmStatus setAlpha:0.0];
+    [self.view addSubview:alarmStatus];
+    return;
+}
+
 - (void)handleTouchClock:(NGClockView *)clockView {
     [UIView animateWithDuration:1.0f
                           delay:0.5f
@@ -212,6 +163,7 @@ UIView *golaParent;
                         [alarmStatus setOn:YES animated:YES];
                     }];
     NSLog(@"Setting Alarm for time: %@",[[clockView time]getTime]);
-
+    timeLabel.text = [NSString stringWithFormat:@"%@",[[clockView time] getTime]];
 }
+
 @end
