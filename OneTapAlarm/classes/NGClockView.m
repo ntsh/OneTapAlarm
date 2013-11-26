@@ -8,6 +8,12 @@
 
 #import "NGClockView.h"
 
+@interface NGClockView ()
+@property UIView *golaParent;
+@property UIImageView *golaView;
+@property float theta;
+@end
+
 @implementation NGClockView
 
 - (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate {
@@ -36,6 +42,7 @@
 - (void)handleTouch:(CGPoint) touchLocation {
     NGTime *time = [self getTimeFromCoordinates:touchLocation];
     [self setTime:time];
+    [self animateClockSetTime];
     [delegate handleTouchClock:self];
     return;
 }
@@ -44,7 +51,8 @@
     int R = [self radius];
     float touchx = point.x;
     float touchy = point.y;
-    float theta = atan2(touchx - R, R - touchy);
+    self.theta = atan2(touchx - R, R - touchy);
+    float theta = self.theta;
     float hour_hand = 6 / M_PI * theta ;
     if (hour_hand < 1) {
         hour_hand = hour_hand + 12;
@@ -85,14 +93,29 @@
 }
 
 - (void) addGola {
-    UIView *golaParent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2 * self.radius, 2* self.radius)];
-    UIImageView *golaView = [[UIImageView alloc] initWithFrame:CGRectMake( 4, 4, 25, 25)];
-    golaView.image = [UIImage imageNamed:@"gola"];
-    golaView.contentMode = UIViewContentModeScaleAspectFit;
+    self.golaParent = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 2 * self.radius, 2* self.radius)];
+    self.golaView = [[UIImageView alloc] initWithFrame:CGRectMake( 4, 4, 25, 25)];
+    self.golaView.image = [UIImage imageNamed:@"gola"];
+    self.golaView.contentMode = UIViewContentModeScaleAspectFit;
     //golaView.center = CGPointMake(clockCenterX,clockCenterY - (R-24));
-    golaView.center = CGPointMake(self.radius,24);
-    [golaParent addSubview:golaView];
-    [self addSubview: golaParent];
+    self.golaView.center = CGPointMake(self.radius,24);
+    [self.golaParent addSubview:self.golaView];
+    [self addSubview: self.golaParent];
+}
+
+- (void) animateClockSetTime {
+    [[self.golaView layer] setAnchorPoint:CGPointMake(0.5, 0.5)];
+
+    [UIView animateWithDuration:1.0f
+                          delay:0.5f
+                        options:UIViewAnimationCurveEaseIn
+                     animations:^{
+                         self.golaParent.transform = CGAffineTransformMakeRotation(self.theta);
+                         //clockView.transform = CGAffineTransformMakeRotation(theta);
+                     }
+                     completion:^(BOOL finished) {
+                     }];
+
 }
 
 @end
