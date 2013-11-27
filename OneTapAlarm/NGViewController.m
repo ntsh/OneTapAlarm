@@ -27,7 +27,7 @@ UIView *golaParent;
 {
     [super viewDidLoad];    
 	// Do any additional setup after loading the view, typically from a nib.
-
+    [self initWithCurrentTime];
 }
 
 -(void) loadView
@@ -148,6 +148,15 @@ UIView *golaParent;
     [alarmStatus setAlpha:0.0];
     [self.view addSubview:alarmStatus];
     return;
+}
+
+- (void) initWithCurrentTime {
+    NSDate *now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"HH:mm"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    NSLog(@"newDateString %@", newDateString);
+    timeLabel.text = newDateString;
 }
 
 - (void)handleTouchClock:(NGClockView *)clockView {
