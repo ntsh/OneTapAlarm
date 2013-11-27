@@ -11,6 +11,7 @@
 @interface NGClockView ()
 @property UIView *golaParent;
 @property UIImageView *golaView;
+@property UILabel *timeLabel;
 @property float theta;
 @end
 
@@ -27,6 +28,7 @@
         NGTime *zeroTime = [NGTime alloc];
         [zeroTime setTime:0 :0];
         [self setTime:zeroTime];
+        [self initWithCurrentTime];
     }
     return self;
 }
@@ -50,6 +52,7 @@
     NGTime *time = [self getTimeFromCoordinates:touchLocation];
     [self setTime:time];
     [self animateClockSetTime];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@",[self.time getTime]];
     [delegate handleTouchClock:self];
     return;
 }
@@ -96,6 +99,8 @@
     [self addSubview:clockView];
 
     [self addGola];
+    [self addTimeLabel];
+
     return;
 }
 
@@ -108,6 +113,32 @@
     self.golaView.center = CGPointMake(self.radius,24);
     [self.golaParent addSubview:self.golaView];
     [self addSubview: self.golaParent];
+}
+
+- (void)addTimeLabel {
+    UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
+    self.timeLabel = [[UILabel alloc] initWithFrame:
+                 CGRectMake(self.radius - 60,self.radius - 40, 120, 80)];
+    self.timeLabel.text = @"12:00";
+    self.timeLabel.backgroundColor = [UIColor clearColor];
+    self.timeLabel.font = textFont;
+    self.timeLabel.textAlignment = NSTextAlignmentCenter;
+    self.timeLabel.textColor = self.textColor;
+    [self addSubview:self.timeLabel];
+}
+
+- (void) initWithCurrentTime {
+    NSDate *now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"hh:mm"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    NSLog(@"newDateString %@", newDateString);
+    self.timeLabel.text = newDateString;
+    return;
+}
+
+- (void) updateTextColor:(UIColor *)textColor {
+    self.textColor = textColor;
 }
 
 - (void) animateClockSetTime {

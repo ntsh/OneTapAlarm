@@ -16,8 +16,10 @@
 
 @property int radius;
 @property NGTime *time;
+@property UIColor *textColor;
 
 - (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate;
+- (void)updateTextColor:(UIColor *)textColor;
 
 @end
 

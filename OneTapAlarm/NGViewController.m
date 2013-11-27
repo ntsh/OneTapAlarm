@@ -25,16 +25,15 @@ UIView *golaParent;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self initWithCurrentTime];
 }
 
 -(void) loadView
 {
+    textColor = [UIColor colorWithRed:0.5255 green:0.255 blue:0.255 alpha:1.0];
     [self setBackground];
     [self addClock];
-    [self addTimeLabel];
     [self addAlarmSwitch];
 }
 
@@ -117,28 +116,13 @@ UIView *golaParent;
 
     //Adding clock image
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    NGClockView *clockV = [[NGClockView alloc] initWithFrame:imageRect
-                                                   andRadius:R
-                                                    delegate:self];
+    NGClockView *clockV = [NGClockView alloc];
+    [clockV updateTextColor: textColor];
+    clockV = [clockV initWithFrame:imageRect
+                andRadius:R
+                 delegate:self];
     [self.view addSubview:clockV];
     return;
-}
-
-- (void)addTimeLabel {
-    UIFont *textFont = [UIFont fontWithName:@"HelveticaNeue" size:36.0];
-    textColor = [UIColor colorWithRed:0.5255 green:0.255 blue:0.255 alpha:1.0];
-    //Adding timeLabel
-    timeLabel = [[UILabel alloc] initWithFrame:
-                 CGRectMake(clockCenterX - 60,clockCenterY - 40, 120, 80)];
-    timeLabel.text = @"12:00";
-    timeLabel.backgroundColor = [UIColor clearColor];
-    timeLabel.font = textFont;
-    timeLabel.textAlignment = NSTextAlignmentCenter;
-    timeLabel.textColor = [UIColor colorWithRed:0.5255
-                                          green:0.255
-                                           blue:0.255
-                                          alpha:1.0];
-    [self.view addSubview:timeLabel];
 }
 
 - (void)addAlarmSwitch {
@@ -148,15 +132,6 @@ UIView *golaParent;
     [alarmStatus setAlpha:0.0];
     [self.view addSubview:alarmStatus];
     return;
-}
-
-- (void) initWithCurrentTime {
-    NSDate *now = [NSDate date];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"HH:mm"];
-    NSString *newDateString = [outputFormatter stringFromDate:now];
-    NSLog(@"newDateString %@", newDateString);
-    timeLabel.text = newDateString;
 }
 
 - (void)handleTouchClock:(NGClockView *)clockView {
@@ -172,7 +147,6 @@ UIView *golaParent;
                         [alarmStatus setOn:YES animated:YES];
                     }];
     NSLog(@"Setting Alarm for time: %@",[[clockView time]getTime]);
-    timeLabel.text = [NSString stringWithFormat:@"%@",[[clockView time] getTime]];
 }
 
 @end
