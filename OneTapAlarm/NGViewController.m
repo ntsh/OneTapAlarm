@@ -22,6 +22,7 @@ UILabel *timeLabel;
 UISwitch *alarmStatus;
 UIColor *textColor;
 UIView *golaParent;
+NGClockView *clockV;
 
 - (void)viewDidLoad
 {
@@ -116,7 +117,7 @@ UIView *golaParent;
 
     //Adding clock image
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    NGClockView *clockV = [[NGClockView alloc]initWithFrame:imageRect
+    clockV = [[NGClockView alloc]initWithFrame:imageRect
                                                   andRadius:R
                                                    delegate:self];
     [clockV updateTextColor: textColor];
@@ -129,6 +130,7 @@ UIView *golaParent;
                    (clockCenterX - 40, clockCenterY + R +50, 100, 40)];
     [alarmStatus setOnTintColor:textColor];
     [alarmStatus setAlpha:0.0];
+    [alarmStatus addTarget:self action:@selector(toggleAlarm:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:alarmStatus];
     return;
 }
@@ -159,7 +161,6 @@ UIView *golaParent;
         secondsRemain += 60 * 60 * 12;
     }
 
-    NSLog(@"Setting alarm after time: %d", secondsRemain);
     NSDate *testDate = [[NSDate alloc] initWithTimeIntervalSinceNow:secondsRemain];
     UILocalNotification *notification = [[UILocalNotification alloc]init];
     notification.fireDate = testDate;
@@ -168,10 +169,12 @@ UIView *golaParent;
 
     [self clearAnyPendingAlarms];
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    NSLog(@"Set alarm after time: %d", secondsRemain);
 
 }
 
 - (void)clearAnyPendingAlarms {
+    NSLog(@"Removing all Alarms");
     UIApplication* app = [UIApplication sharedApplication];
     NSArray* oldNotifications = [app scheduledLocalNotifications];
     // Clear out the old notification before scheduling a new one.
@@ -179,4 +182,15 @@ UIView *golaParent;
     if ([oldNotifications count] > 0)
         [app cancelAllLocalNotifications];
 }
+
+- (void)toggleAlarm:(id)sender {
+    BOOL state = [sender isOn];
+    if (state) {
+        [self setAlarmAtTime:[clockV time]];
+    } else {
+        [self clearAnyPendingAlarms];
+    }
+    return;
+}
+
 @end
