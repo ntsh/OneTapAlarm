@@ -29,6 +29,7 @@
         [zeroTime setTime:0 :0];
         [self setTime:zeroTime];
         [self initWithCurrentTime];
+        [[self timeLabel] setEnabled:true];
     }
     return self;
 }
@@ -123,21 +124,20 @@
     self.timeLabel.backgroundColor = [UIColor clearColor];
     self.timeLabel.font = textFont;
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
-    self.timeLabel.textColor = self.textColor;
     [self addSubview:self.timeLabel];
 }
 
 - (void) initWithCurrentTime {
-    NSDate *now = [NSDate date];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"hh:mm"];
-    NSString *newDateString = [outputFormatter stringFromDate:now];
-    NSLog(@"newDateString %@", newDateString);
-    self.timeLabel.text = newDateString;
+    NGTime *currentTime = [[NGTime alloc]initWithCurrentTime];
+    [self setTheta:[currentTime getHourHandAngle]];
+    [[self timeLabel] setText:[currentTime getTime]];
+    [self animateClockSetTime];
+    NSLog(@"Initial Theta: %f", [self theta]);
     return;
 }
 
 - (void) updateTextColor:(UIColor *)textColor {
+    self.timeLabel.textColor = textColor;
     self.textColor = textColor;
 }
 

@@ -116,11 +116,10 @@ UIView *golaParent;
 
     //Adding clock image
     CGRect imageRect = CGRectMake(clockCenterX - R, clockCenterY - R, 2*R, 2*R);
-    NGClockView *clockV = [NGClockView alloc];
+    NGClockView *clockV = [[NGClockView alloc]initWithFrame:imageRect
+                                                  andRadius:R
+                                                   delegate:self];
     [clockV updateTextColor: textColor];
-    clockV = [clockV initWithFrame:imageRect
-                andRadius:R
-                 delegate:self];
     [self.view addSubview:clockV];
     return;
 }
@@ -146,7 +145,38 @@ UIView *golaParent;
                     {
                         [alarmStatus setOn:YES animated:YES];
                     }];
-    NSLog(@"Setting Alarm for time: %@",[[clockView time]getTime]);
+    NGTime *time = [clockView time];
+    NSLog(@"Setting Alarm for time: %@",[time getTime]);
+    [self setAlarmAtTime:time];
 }
 
+- (void)setAlarmAtTime:(NGTime*)alarmTime {
+    NGTime *now = [[NGTime alloc]initWithCurrentTime];
+    int nowSeconds = [now getSecondsFrom12];
+    int alarmSeconds = [alarmTime getSecondsFrom12];
+    int secondsRemain = alarmSeconds - nowSeconds;
+    if (secondsRemain < 0) {
+        secondsRemain += 60 * 60 * 12;
+    }
+
+    NSLog(@"Setting alarm after time: %d", secondsRemain);
+    NSDate *testDate = [[NSDate alloc] initWithTimeIntervalSinceNow:secondsRemain];
+    UILocalNotification *notification = [[UILocalNotification alloc]init];
+    notification.fireDate = testDate;
+    notification.alertBody = @"Time to wake up!!";
+    notification.soundName = @"alarm.mp3";
+
+    [self clearAnyPendingAlarms];
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
+}
+
+- (void)clearAnyPendingAlarms {
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray* oldNotifications = [app scheduledLocalNotifications];
+    // Clear out the old notification before scheduling a new one.
+
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+}
 @end

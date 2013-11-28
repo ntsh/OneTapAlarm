@@ -13,7 +13,11 @@
 @property int hour;
 @property int minute;
 
+- (id) initWithTime:(NSDate *)time;
+- (id) initWithCurrentTime;
 -(void)setTime:(int)hr :(int)min;
 -(NSString*)getTime;
+- (float)getHourHandAngle; //Return Angle in radians that the hour hand is tilted.
+- (int)getSecondsFrom12; //Returns Number of seconds to this time from 12'O Clock.
 
 @end

@@ -13,6 +13,7 @@
 		B121EE8016B02E7A00E739AC /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7F16B02E7A00E739AC /* Clock.png */; };
 		B161AF82182E9E0D00611941 /* NGTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF81182E9E0D00611941 /* NGTime.m */; };
 		B161AF85182F7BC400611941 /* NGClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF84182F7BC400611941 /* NGClockView.m */; };
+		B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B18821C518472C2A002AEBD9 /* alarm.mp3 */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
 		B190141C168F015100B5E183 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190141B168F015100B5E183 /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 		B161AF81182E9E0D00611941 /* NGTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGTime.m; path = classes/NGTime.m; sourceTree = "<group>"; };
 		B161AF83182F7BC400611941 /* NGClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClockView.h; path = classes/NGClockView.h; sourceTree = "<group>"; };
 		B161AF84182F7BC400611941 /* NGClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGClockView.m; path = classes/NGClockView.m; sourceTree = "<group>"; };
+		B18821C518472C2A002AEBD9 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1901419168F015100B5E183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B18821C518472C2A002AEBD9 /* alarm.mp3 */,
 				B121EE7F16B02E7A00E739AC /* Clock.png */,
 				B121EE7616B02E0400E739AC /* background i5.png */,
 				B121EE7716B02E0400E739AC /* background.png */,
@@ -194,6 +197,7 @@
 				B121EE7B16B02E0400E739AC /* background.png in Resources */,
 				B121EE7D16B02E0400E739AC /* gola.png in Resources */,
 				B121EE8016B02E7A00E739AC /* Clock.png in Resources */,
+				B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
