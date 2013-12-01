@@ -49,11 +49,21 @@
     [self handleTouch:touchLocation];
 }
 
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInView:self];
+    [self setAlarm:touchLocation];
+}
+
 - (void)handleTouch:(CGPoint) touchLocation {
     NGTime *time = [self getTimeFromCoordinates:touchLocation];
     [self setTime:time];
     [self animateClockSetTime];
     self.timeLabel.text = [NSString stringWithFormat:@"%@",[self.time getTime]];
+    return;
+}
+
+- (void)setAlarm:(CGPoint)touchLocation {
     [delegate handleTouchClock:self];
     return;
 }
