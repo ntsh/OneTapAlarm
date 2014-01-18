@@ -28,6 +28,8 @@ NGClockView *clockV;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self setAppAtOldAlarm];
+
 }
 
 -(void) loadView
@@ -179,8 +181,10 @@ NGClockView *clockV;
     NSArray* oldNotifications = [app scheduledLocalNotifications];
     // Clear out the old notification before scheduling a new one.
 
-    if ([oldNotifications count] > 0)
+    if ([oldNotifications count] > 0) {
+        NSLog(@"Fire Time:%@",[[[oldNotifications objectAtIndex:0] fireDate] description]);
         [app cancelAllLocalNotifications];
+    }
 }
 
 - (void)toggleAlarm:(id)sender {
@@ -191,6 +195,26 @@ NGClockView *clockV;
         [self clearAnyPendingAlarms];
     }
     return;
+}
+
+- (void)setAppAtOldAlarm {
+    if ([self setTimeToAlarm]) {
+        [alarmStatus setAlpha:1.0f];
+        [alarmStatus setOn:YES animated:YES];
+    }
+}
+
+- (BOOL)setTimeToAlarm {
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray* oldNotifications = [app scheduledLocalNotifications];
+    if ([oldNotifications count] > 0) {
+        NSDate *alarmDate = [[oldNotifications objectAtIndex:0] fireDate];
+        NGTime *alarmTime = [[NGTime alloc] initWithTime:alarmDate];
+        [clockV setNewTime:alarmTime];
+        NSLog(@"setting clock time to alarm time %@", [alarmTime getTime]);
+        return TRUE;
+    }
+    return FALSE;
 }
 
 @end

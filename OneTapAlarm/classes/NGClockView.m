@@ -34,6 +34,15 @@
     return self;
 }
 
+- (void) setNewTime:(NGTime *)timeNew {
+    self.time = timeNew;
+    [self setTheta:[timeNew getHourHandAngle]];
+    [[self timeLabel] setText:[timeNew getTime]];
+    [self animateClockSetTime];
+    NSLog(@"Initial Theta: %f", [self theta]);
+    return;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView:self];

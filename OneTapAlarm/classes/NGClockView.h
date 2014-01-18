@@ -20,6 +20,7 @@
 
 - (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate;
 - (void)updateTextColor:(UIColor *)textColor;
+- (void)setNewTime:(NGTime *)time;
 
 @end
 
