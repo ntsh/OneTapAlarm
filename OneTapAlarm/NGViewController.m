@@ -129,7 +129,7 @@ NGClockView *clockV;
 
 - (void)addAlarmSwitch {
     alarmStatus = [[UISwitch alloc] initWithFrame:CGRectMake
-                   (clockCenterX - 40, clockCenterY + R +50, 100, 40)];
+                   (clockCenterX - 25, clockCenterY + R +50, 60, 40)];
     [alarmStatus setOnTintColor:textColor];
     [alarmStatus setAlpha:0.0];
     [alarmStatus addTarget:self action:@selector(toggleAlarm:) forControlEvents:UIControlEventValueChanged];
