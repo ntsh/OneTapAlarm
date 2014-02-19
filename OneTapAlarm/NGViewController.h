@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
 #import "NGClockView.h"
+#import "CRToast.h"
 
 @interface NGViewController : UIViewController
 

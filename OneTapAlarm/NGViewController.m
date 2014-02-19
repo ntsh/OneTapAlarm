@@ -172,7 +172,21 @@ NGClockView *clockV;
     [self clearAnyPendingAlarms];
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     NSLog(@"Set alarm after time: %d", secondsRemain);
-
+    NSString *toastText = [NSString stringWithFormat:@"Alarm set for %@",[alarmTime getTime]];
+    NSDictionary *options = @{kCRToastTextKey : toastText,
+                              kCRToastFontKey : [UIFont fontWithName:@"HelveticaNeue-Light" size:24],
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                              kCRToastBackgroundColorKey : textColor,
+                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeLinear),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight),
+                              kCRToastNotificationTypeKey: @(CRToastTypeNavigationBar),
+                              };
+    [CRToastManager showNotificationWithOptions:options
+                                completionBlock:^{
+                                                NSLog(@"Completed");
+                                        }];
 }
 
 - (void)clearAnyPendingAlarms {
