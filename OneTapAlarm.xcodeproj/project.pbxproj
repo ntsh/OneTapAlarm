@@ -26,6 +26,7 @@
 		B190142C168F015200B5E183 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B190142B168F015200B5E183 /* Default@2x.png */; };
 		B1901437168F015200B5E183 /* NGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1901436168F015200B5E183 /* NGViewController.m */; };
 		B190143E168F082500B5E183 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190143D168F082500B5E183 /* QuartzCore.framework */; };
+		B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A49AC218B538FC000F1C72 /* CRToast.m */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		B1901435168F015200B5E183 /* NGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGViewController.h; sourceTree = "<group>"; };
 		B1901436168F015200B5E183 /* NGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGViewController.m; sourceTree = "<group>"; };
 		B190143D168F082500B5E183 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B1A49AC118B538FC000F1C72 /* CRToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRToast.h; sourceTree = "<group>"; };
+		B1A49AC218B538FC000F1C72 /* CRToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRToast.m; sourceTree = "<group>"; };
 		B1FB3B501694199C00B86EB0 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +80,7 @@
 		B1901408168F015100B5E183 = {
 			isa = PBXGroup;
 			children = (
+				B1A49AC018B538FC000F1C72 /* CRToast */,
 				B190143D168F082500B5E183 /* QuartzCore.framework */,
 				B190141D168F015100B5E183 /* OneTapAlarm */,
 				B1901416168F015100B5E183 /* Frameworks */,
@@ -137,6 +141,15 @@
 				B190142B168F015200B5E183 /* Default@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1A49AC018B538FC000F1C72 /* CRToast */ = {
+			isa = PBXGroup;
+			children = (
+				B1A49AC118B538FC000F1C72 /* CRToast.h */,
+				B1A49AC218B538FC000F1C72 /* CRToast.m */,
+			);
+			path = CRToast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +227,7 @@
 			files = (
 				B1901424168F015200B5E183 /* main.m in Sources */,
 				B1901428168F015200B5E183 /* NGAppDelegate.m in Sources */,
+				B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
 				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
 				B161AF85182F7BC400611941 /* NGClockView.m in Sources */,
