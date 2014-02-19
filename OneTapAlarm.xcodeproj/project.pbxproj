@@ -11,6 +11,8 @@
 		B121EE7B16B02E0400E739AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7716B02E0400E739AC /* background.png */; };
 		B121EE7D16B02E0400E739AC /* gola.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7916B02E0400E739AC /* gola.png */; };
 		B121EE8016B02E7A00E739AC /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7F16B02E7A00E739AC /* Clock.png */; };
+		B1287A4618AC0983001A44F4 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1287A4518AC0983001A44F4 /* Icon-60@2x.png */; };
+		B1287A4818AC0E0B001A44F4 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */; };
 		B161AF82182E9E0D00611941 /* NGTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF81182E9E0D00611941 /* NGTime.m */; };
 		B161AF85182F7BC400611941 /* NGClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF84182F7BC400611941 /* NGClockView.m */; };
 		B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B18821C518472C2A002AEBD9 /* alarm.mp3 */; };
@@ -22,7 +24,6 @@
 		B1901428168F015200B5E183 /* NGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1901427168F015200B5E183 /* NGAppDelegate.m */; };
 		B190142A168F015200B5E183 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B1901429168F015200B5E183 /* Default.png */; };
 		B190142C168F015200B5E183 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B190142B168F015200B5E183 /* Default@2x.png */; };
-		B190142E168F015200B5E183 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B190142D168F015200B5E183 /* Default-568h@2x.png */; };
 		B1901437168F015200B5E183 /* NGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1901436168F015200B5E183 /* NGViewController.m */; };
 		B190143E168F082500B5E183 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190143D168F082500B5E183 /* QuartzCore.framework */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
@@ -33,6 +34,8 @@
 		B121EE7716B02E0400E739AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		B121EE7916B02E0400E739AC /* gola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gola.png; sourceTree = "<group>"; };
 		B121EE7F16B02E7A00E739AC /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
+		B1287A4518AC0983001A44F4 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
 		B161AF80182E9E0D00611941 /* NGTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGTime.h; path = classes/NGTime.h; sourceTree = "<group>"; };
 		B161AF81182E9E0D00611941 /* NGTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGTime.m; path = classes/NGTime.m; sourceTree = "<group>"; };
 		B161AF83182F7BC400611941 /* NGClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClockView.h; path = classes/NGClockView.h; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		B1901427168F015200B5E183 /* NGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAppDelegate.m; sourceTree = "<group>"; };
 		B1901429168F015200B5E183 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B190142B168F015200B5E183 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B190142D168F015200B5E183 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B1901435168F015200B5E183 /* NGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGViewController.h; sourceTree = "<group>"; };
 		B1901436168F015200B5E183 /* NGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGViewController.m; sourceTree = "<group>"; };
 		B190143D168F082500B5E183 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -119,6 +121,8 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */,
+				B1287A4518AC0983001A44F4 /* Icon-60@2x.png */,
 				B18821C518472C2A002AEBD9 /* alarm.mp3 */,
 				B121EE7F16B02E7A00E739AC /* Clock.png */,
 				B121EE7616B02E0400E739AC /* background i5.png */,
@@ -131,7 +135,6 @@
 				B1901425168F015200B5E183 /* OneTapAlarm-Prefix.pch */,
 				B1901429168F015200B5E183 /* Default.png */,
 				B190142B168F015200B5E183 /* Default@2x.png */,
-				B190142D168F015200B5E183 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -191,13 +194,14 @@
 				B1901422168F015100B5E183 /* InfoPlist.strings in Resources */,
 				B190142A168F015200B5E183 /* Default.png in Resources */,
 				B190142C168F015200B5E183 /* Default@2x.png in Resources */,
-				B190142E168F015200B5E183 /* Default-568h@2x.png in Resources */,
 				B1FB3B511694199C00B86EB0 /* sun.png in Resources */,
 				B121EE7A16B02E0400E739AC /* background i5.png in Resources */,
 				B121EE7B16B02E0400E739AC /* background.png in Resources */,
 				B121EE7D16B02E0400E739AC /* gola.png in Resources */,
 				B121EE8016B02E7A00E739AC /* Clock.png in Resources */,
 				B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */,
+				B1287A4818AC0E0B001A44F4 /* Default-568@2x.png in Resources */,
+				B1287A4618AC0983001A44F4 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +296,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneTapAlarm/OneTapAlarm-Prefix.pch";
 				INFOPLIST_FILE = "OneTapAlarm/OneTapAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -304,7 +310,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneTapAlarm/OneTapAlarm-Prefix.pch";
 				INFOPLIST_FILE = "OneTapAlarm/OneTapAlarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
