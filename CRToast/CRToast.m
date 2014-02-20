@@ -166,7 +166,7 @@ static CGFloat CRGetStatusBarHeight() {
 
 static CGFloat CRGetStatusBarWidth() {
     if (UIDeviceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
-        return [UIScreen mainScreen].bounds.size.width;
+        return [UIScreen mainScreen].bounds.size.width+1;
     }
     return [UIScreen mainScreen].bounds.size.height;
 }
