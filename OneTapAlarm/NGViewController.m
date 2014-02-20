@@ -167,7 +167,8 @@ NGClockView *clockV;
     UILocalNotification *notification = [[UILocalNotification alloc]init];
     notification.fireDate = testDate;
     notification.alertBody = @"Time to wake up!!";
-    notification.soundName = @"alarm.mp3";
+    notification.soundName = @"alarm_long.mp3";
+    notification.alertAction = @"Cancel Alarm";
 
     [self clearAnyPendingAlarms];
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
