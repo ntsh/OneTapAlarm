@@ -15,6 +15,10 @@
 		B1287A4818AC0E0B001A44F4 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */; };
 		B161AF82182E9E0D00611941 /* NGTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF81182E9E0D00611941 /* NGTime.m */; };
 		B161AF85182F7BC400611941 /* NGClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = B161AF84182F7BC400611941 /* NGClockView.m */; };
+		B16F967418B650B4008A6A58 /* alarm_long.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B16F967318B650B4008A6A58 /* alarm_long.mp3 */; };
+		B16F967618B65DA3008A6A58 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F967518B65DA3008A6A58 /* Default-568h@2x.png */; };
+		B16F967818B689C1008A6A58 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */; };
+		B16F967A18B68A82008A6A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16F967918B68A82008A6A58 /* Images.xcassets */; };
 		B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B18821C518472C2A002AEBD9 /* alarm.mp3 */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
@@ -41,6 +45,10 @@
 		B161AF81182E9E0D00611941 /* NGTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGTime.m; path = classes/NGTime.m; sourceTree = "<group>"; };
 		B161AF83182F7BC400611941 /* NGClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClockView.h; path = classes/NGClockView.h; sourceTree = "<group>"; };
 		B161AF84182F7BC400611941 /* NGClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGClockView.m; path = classes/NGClockView.m; sourceTree = "<group>"; };
+		B16F967318B650B4008A6A58 /* alarm_long.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_long.mp3; sourceTree = "<group>"; };
+		B16F967518B65DA3008A6A58 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B16F967918B68A82008A6A58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B18821C518472C2A002AEBD9 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -109,6 +117,7 @@
 		B190141D168F015100B5E183 /* OneTapAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */,
 				B1901426168F015200B5E183 /* NGAppDelegate.h */,
 				B1901427168F015200B5E183 /* NGAppDelegate.m */,
 				B1901435168F015200B5E183 /* NGViewController.h */,
@@ -117,6 +126,7 @@
 				B161AF81182E9E0D00611941 /* NGTime.m */,
 				B161AF83182F7BC400611941 /* NGClockView.h */,
 				B161AF84182F7BC400611941 /* NGClockView.m */,
+				B16F967918B68A82008A6A58 /* Images.xcassets */,
 				B190141E168F015100B5E183 /* Supporting Files */,
 			);
 			path = OneTapAlarm;
@@ -125,6 +135,8 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B16F967518B65DA3008A6A58 /* Default-568h@2x.png */,
+				B16F967318B650B4008A6A58 /* alarm_long.mp3 */,
 				B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */,
 				B1287A4518AC0983001A44F4 /* Icon-60@2x.png */,
 				B18821C518472C2A002AEBD9 /* alarm.mp3 */,
@@ -181,6 +193,11 @@
 				CLASSPREFIX = NG;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Neetesh Gupta";
+				TargetAttributes = {
+					B1901412168F015100B5E183 = {
+						DevelopmentTeam = MN36AT8M6S;
+					};
+				};
 			};
 			buildConfigurationList = B190140D168F015100B5E183 /* Build configuration list for PBXProject "OneTapAlarm" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -206,12 +223,16 @@
 			files = (
 				B1901422168F015100B5E183 /* InfoPlist.strings in Resources */,
 				B190142A168F015200B5E183 /* Default.png in Resources */,
+				B16F967418B650B4008A6A58 /* alarm_long.mp3 in Resources */,
 				B190142C168F015200B5E183 /* Default@2x.png in Resources */,
 				B1FB3B511694199C00B86EB0 /* sun.png in Resources */,
 				B121EE7A16B02E0400E739AC /* background i5.png in Resources */,
+				B16F967A18B68A82008A6A58 /* Images.xcassets in Resources */,
 				B121EE7B16B02E0400E739AC /* background.png in Resources */,
 				B121EE7D16B02E0400E739AC /* gola.png in Resources */,
 				B121EE8016B02E7A00E739AC /* Clock.png in Resources */,
+				B16F967618B65DA3008A6A58 /* Default-568h@2x.png in Resources */,
+				B16F967818B689C1008A6A58 /* MainStoryboard.storyboard in Resources */,
 				B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */,
 				B1287A4818AC0E0B001A44F4 /* Default-568@2x.png in Resources */,
 				B1287A4618AC0983001A44F4 /* Icon-60@2x.png in Resources */,
@@ -290,7 +311,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neetesh Gupta (MN36AT8M6S)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -298,6 +319,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "45FEF00C-C7D1-4F74-8BD3-2F4016D9FDE4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -307,6 +329,9 @@
 		B190143B168F015200B5E183 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneTapAlarm/OneTapAlarm-Prefix.pch";
 				INFOPLIST_FILE = "OneTapAlarm/OneTapAlarm-Info.plist";
@@ -320,7 +345,10 @@
 		B190143C168F015200B5E183 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Neetesh Gupta (MN36AT8M6S)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneTapAlarm/OneTapAlarm-Prefix.pch";
 				INFOPLIST_FILE = "OneTapAlarm/OneTapAlarm-Info.plist";
