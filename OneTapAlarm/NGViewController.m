@@ -162,13 +162,13 @@ NGClockView *clockV;
     if (secondsRemain < 0) {
         secondsRemain += 60 * 60 * 12;
     }
-
+        //secondsRemain = 10;
     NSDate *testDate = [[NSDate alloc] initWithTimeIntervalSinceNow:secondsRemain];
     UILocalNotification *notification = [[UILocalNotification alloc]init];
     notification.fireDate = testDate;
     notification.alertBody = @"Time to wake up!!";
     notification.soundName = @"alarm_long.mp3";
-    notification.alertAction = @"Cancel Alarm";
+        //notification.alertAction = @"Cancel Alarm";
 
     [self clearAnyPendingAlarms];
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
