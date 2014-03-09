@@ -41,7 +41,7 @@
 }
 
 - (int)getSecondsFrom12 {
-    return 60 * 60 * [self hour] + 60 * [self minute];
+    return 60 * 60 * [self hour] + 60 * [self minute] + [self second];
 }
 
 - (float)getHourHandAngle {
