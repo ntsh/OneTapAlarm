@@ -12,9 +12,9 @@
 
 - (id) initWithTime:(NSDate *)time {
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-    NSDateComponents *timeComponent = [calendar components: (NSHourCalendarUnit | NSMinuteCalendarUnit)
+    NSDateComponents *timeComponent = [calendar components: (NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit)
                                                   fromDate: time];
-    [self setTime:[timeComponent hour] :[timeComponent minute]];
+    [self setTime:[timeComponent hour] :[timeComponent minute] :[timeComponent second]];
     return self;
 }
 
@@ -27,6 +27,12 @@
 - (void)setTime:(int)hr :(int)min {
     [self setHour:hr];
     [self setMinute:min];
+}
+
+- (void)setTime:(int)hr :(int)min :(int)sec{
+    [self setHour:hr];
+    [self setMinute:min];
+    [self setSecond:sec];
 }
 
 - (NSString*) getTime {
