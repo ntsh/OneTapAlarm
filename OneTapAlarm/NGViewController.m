@@ -180,7 +180,7 @@ NGClockView *clockV;
                               kCRToastBackgroundColorKey : textColor,
                               kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
                               kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeLinear),
-                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionTop),
                               kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight),
                               kCRToastNotificationTypeKey: @(CRToastTypeNavigationBar),
                               };
