@@ -184,6 +184,7 @@ NGClockView *clockV;
                               kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight),
                               kCRToastNotificationTypeKey: @(CRToastTypeNavigationBar),
                               };
+    [CRToastManager dismissNotification:YES];
     [CRToastManager showNotificationWithOptions:options
                                 completionBlock:^{
                                                 NSLog(@"Completed");
