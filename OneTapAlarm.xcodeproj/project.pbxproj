@@ -40,6 +40,7 @@
 		B1CAEF6118D4AD16007FD8B6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF6018D4AD16007FD8B6 /* Security.framework */; };
 		B1CAEF6318D4AD20007FD8B6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF6218D4AD20007FD8B6 /* StoreKit.framework */; };
 		B1CAEF6518D4AD2E007FD8B6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */; };
+		B1CAEF6718D4B898007FD8B6 /* parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1CAEF6618D4B898007FD8B6 /* parse.plist */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		B1CAEF6018D4AD16007FD8B6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B1CAEF6218D4AD20007FD8B6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B1CAEF6618D4B898007FD8B6 /* parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parse.plist; sourceTree = "<group>"; };
 		B1FB3B501694199C00B86EB0 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +173,7 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1CAEF6618D4B898007FD8B6 /* parse.plist */,
 				B16F967518B65DA3008A6A58 /* Default-568h@2x.png */,
 				B16F967318B650B4008A6A58 /* alarm_long.mp3 */,
 				B1287A4718AC0E0B001A44F4 /* Default-568@2x.png */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CAEF6718D4B898007FD8B6 /* parse.plist in Resources */,
 				B1901422168F015100B5E183 /* InfoPlist.strings in Resources */,
 				B190142A168F015200B5E183 /* Default.png in Resources */,
 				B16F967418B650B4008A6A58 /* alarm_long.mp3 in Resources */,
