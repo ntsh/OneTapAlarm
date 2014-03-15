@@ -7,12 +7,14 @@
 //
 
 #import "NGAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation NGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self parseAppLaunch:launchOptions];
     return YES;
 }
 							
@@ -52,6 +54,16 @@
         NSLog(@"App inactive or background");
     }*/
     return;
+}
+
+- (void)parseAppLaunch :(NSDictionary *)launchOptions{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
+    NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
+    NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
+    [Parse setApplicationId:applicationId
+                  clientKey:clientKey];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
 }
 
 @end
