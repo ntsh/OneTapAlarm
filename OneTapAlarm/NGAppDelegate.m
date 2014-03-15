@@ -8,13 +8,19 @@
 
 #import "NGAppDelegate.h"
 #import <Parse/Parse.h>
+#import "NGTime.h"
 
 @implementation NGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self parseAppLaunch:launchOptions];
+    UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if(notification) {
+        [self trackNotification:notification];
+    } else {
+        [self parseAppLaunch:launchOptions];
+    }
     return YES;
 }
 							
@@ -47,23 +53,35 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notif {
-    /*NSLog(@"Local notif received");
+    NSLog(@"Local notif received");
     UIApplicationState state = [application applicationState];
+    [self trackNotification:notif];
     if(state == UIApplicationStateInactive || state == UIApplicationStateBackground){
         [application cancelAllLocalNotifications];
         NSLog(@"App inactive or background");
-    }*/
+    }
     return;
+}
+
+- (void)trackNotification :(UILocalNotification*)notification {
+    NGTime *fireTime = [[NGTime alloc] initWithTime:notification.fireDate];
+    NSDictionary *dict = @{@"Status" : @"Fired"};
+        //[dict setValue:[fireTime getTime] forKey:@"fireTime"];
+    NSLog(@"Notification fired at date: %@", [fireTime getTime]);
+
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
+    NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
+    NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
+    [Parse setApplicationId:applicationId clientKey:clientKey];
+    [PFAnalytics trackEvent:@"Alarm" dimensions:dict];
 }
 
 - (void)parseAppLaunch :(NSDictionary *)launchOptions{
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
     NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
     NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
-    [Parse setApplicationId:applicationId
-                  clientKey:clientKey];
+    [Parse setApplicationId:applicationId clientKey:clientKey];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-
 }
 
 @end
