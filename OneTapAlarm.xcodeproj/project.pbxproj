@@ -118,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				B1A49AC018B538FC000F1C72 /* CRToast */,
-				B190143D168F082500B5E183 /* QuartzCore.framework */,
 				B190141D168F015100B5E183 /* OneTapAlarm */,
 				B1901416168F015100B5E183 /* Frameworks */,
 				B1901414168F015100B5E183 /* Products */,
@@ -136,6 +135,7 @@
 		B1901416168F015100B5E183 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B190143D168F082500B5E183 /* QuartzCore.framework */,
 				B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */,
 				B1CAEF6218D4AD20007FD8B6 /* StoreKit.framework */,
 				B1CAEF6018D4AD16007FD8B6 /* Security.framework */,

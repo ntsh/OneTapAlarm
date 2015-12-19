@@ -10,15 +10,15 @@
 #import "NGTime.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface NGClockView : UIView {
-    id delegate;
-}
+IB_DESIGNABLE
+@interface NGClockView : UIView
 
-@property int radius;
+@property IBInspectable int radius;
+@property IBInspectable id delegate;
 @property NGTime *time;
-@property UIColor *textColor;
+@property IBInspectable UIColor *textColor;
 
-- (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate;
+- (void)setRadius:(int)radius delegate:(id)aDelegate;
 - (void)updateTextColor:(UIColor *)textColor;
 - (void)setNewTime:(NGTime *)time;
 

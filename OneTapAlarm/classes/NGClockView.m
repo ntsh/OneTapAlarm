@@ -17,21 +17,18 @@
 
 @implementation NGClockView
 
-- (id)initWithFrame:(CGRect)frame andRadius:(int)radius delegate:(id)aDelegate {
-    self = [super initWithFrame:frame];
-    delegate = aDelegate;
+- (void)setRadius:(int)radius delegate:(id)aDelegate {
+    _delegate = aDelegate;
     [self setRadius:radius];
 
-    if (self) {
-        [self addClock];
+    [self addClock];
 
-        NGTime *zeroTime = [NGTime alloc];
-        [zeroTime setTime:0 :0];
-        [self setTime:zeroTime];
-        [self initWithCurrentTime];
-        [[self timeLabel] setEnabled:true];
-    }
-    return self;
+    NGTime *zeroTime = [NGTime alloc];
+    [zeroTime setTime:0 :0];
+    [self setTime:zeroTime];
+    [self initWithCurrentTime];
+    [[self timeLabel] setEnabled:true];
+
 }
 
 - (void) setNewTime:(NGTime *)timeNew {
@@ -73,7 +70,7 @@
 }
 
 - (void)setAlarm:(CGPoint)touchLocation {
-    [delegate handleTouchClock:self];
+    [_delegate handleTouchClock:self];
     return;
 }
 
@@ -120,7 +117,7 @@
 
     [self addGola];
     [self addTimeLabel];
-
+    self.timeLabel.textColor = _textColor;
     return;
 }
 
@@ -175,4 +172,7 @@
 
 }
 
+- (void)prepareForInterfaceBuilder {
+    [self addClock];
+}
 @end
