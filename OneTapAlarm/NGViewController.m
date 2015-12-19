@@ -48,30 +48,6 @@ UIView *golaParent;
     // Dispose of any resources that can be recreated.
 }
 
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-}
-
--(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-}
-
--(void) handleTouch:(CGPoint)touchLocation
-{
-    NGTime *time = [NGTime alloc];
-    [time setTime:5 :10];
-    NSLog(@"%@",[time getTime]);
-    timeLabel.text = [NSString stringWithFormat:@"%@",[time getTime]];
-
-    /*golaView.layer.anchorPoint = self.view.center;
-    golaView.center  = CGPointMake(clockCenterX,clockCenterY - (R-24));;
-    CATransform3D rotatedTransform = golaView.layer.transform;
-    rotatedTransform = CATransform3DRotate(rotatedTransform, theta, 0.0f, 0.0f, 1.0f);
-    golaView.layer.transform = rotatedTransform;*/
-    //[self rotateView:golaView aroundPoint:self.view.center duration:2 degrees:theta];
-   
-}
-
 - (void)setBackground {
 
     self.backgroundView.backgroundColor = [UIColor colorWithPatternImage:
