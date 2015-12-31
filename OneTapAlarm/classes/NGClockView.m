@@ -19,7 +19,7 @@
 
 - (void)setRadius:(int)radius delegate:(id)aDelegate {
     _delegate = aDelegate;
-    [self setRadius:radius];
+    //[self setRadius:radius];
 
     [self addClock];
 
