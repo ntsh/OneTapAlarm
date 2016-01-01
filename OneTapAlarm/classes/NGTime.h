@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NGTime : NSObject
+@interface NGTime : NSObject <NSCoding>
 
 @property int hour;
 @property int minute;

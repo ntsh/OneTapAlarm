@@ -57,4 +57,25 @@
     return theta;
 }
 
+#pragma mark - NSCoding
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.hour = [decoder decodeIntForKey:@"hour"];
+    self.minute = [decoder decodeIntForKey:@"minute"];
+    self.second = [decoder decodeIntForKey:@"second"];
+
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    [encoder encodeInt:self.hour forKey:@"hour"];
+    [encoder encodeInt:self.minute forKey:@"minute"];
+    [encoder encodeInt:self.second forKey:@"second"];
+}
+
 @end

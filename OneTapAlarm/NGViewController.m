@@ -7,6 +7,8 @@
 //
 
 #import "NGViewController.h"
+#import "NGClock.h"
+#import "NGClockManager.h"
 
 @interface NGViewController ()
 @property (strong, nonatomic) IBOutlet NGClockView *clockV;
@@ -80,6 +82,11 @@ UIView *golaParent;
 }
 
 - (void)setAlarmAtTime:(NGTime*)alarmTime {
+    NGClock *clock = [NGClock new];
+    clock.alarmTime = alarmTime;
+    clock.clockId = 1;
+    clock.status = 1;
+    [NGClockManager saveClock:clock];
     NGTime *now = [[NGTime alloc]initWithCurrentTime];
     int nowSeconds = [now getSecondsFrom12];
     int alarmSeconds = [alarmTime getSecondsFrom12];

@@ -8,8 +8,11 @@
 
 #import "NGAlarmsTableViewController.h"
 #import "NGClockView.h"
+#import "NGClockManager.h"
 
 @interface NGAlarmsTableViewController ()
+
+@property NSArray* alarms;
 
 @end
 
@@ -23,6 +26,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.alarms = [NGClockManager getAllClocks];
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +47,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return self.alarms.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -20,6 +20,8 @@
 		B16F967618B65DA3008A6A58 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F967518B65DA3008A6A58 /* Default-568h@2x.png */; };
 		B16F967818B689C1008A6A58 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */; };
 		B16F967A18B68A82008A6A58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B16F967918B68A82008A6A58 /* Images.xcassets */; };
+		B17D802C1C370634006E2605 /* NGClock.m in Sources */ = {isa = PBXBuildFile; fileRef = B17D802B1C370634006E2605 /* NGClock.m */; };
+		B17D802F1C370B79006E2605 /* NGClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B17D802E1C370B79006E2605 /* NGClockManager.m */; };
 		B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B18821C518472C2A002AEBD9 /* alarm.mp3 */; };
 		B1901418168F015100B5E183 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901417168F015100B5E183 /* UIKit.framework */; };
 		B190141A168F015100B5E183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1901419168F015100B5E183 /* Foundation.framework */; };
@@ -62,6 +64,10 @@
 		B16F967518B65DA3008A6A58 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B16F967918B68A82008A6A58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B17D802A1C370634006E2605 /* NGClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClock.h; path = classes/NGClock.h; sourceTree = "<group>"; };
+		B17D802B1C370634006E2605 /* NGClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGClock.m; path = classes/NGClock.m; sourceTree = "<group>"; };
+		B17D802D1C370B79006E2605 /* NGClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGClockManager.h; path = classes/NGClockManager.h; sourceTree = "<group>"; };
+		B17D802E1C370B79006E2605 /* NGClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGClockManager.m; path = classes/NGClockManager.m; sourceTree = "<group>"; };
 		B18821C518472C2A002AEBD9 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		B1901413168F015100B5E183 /* OneTapAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneTapAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1901417168F015100B5E183 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -169,6 +175,10 @@
 				B161AF81182E9E0D00611941 /* NGTime.m */,
 				B161AF83182F7BC400611941 /* NGClockView.h */,
 				B161AF84182F7BC400611941 /* NGClockView.m */,
+				B17D802A1C370634006E2605 /* NGClock.h */,
+				B17D802B1C370634006E2605 /* NGClock.m */,
+				B17D802D1C370B79006E2605 /* NGClockManager.h */,
+				B17D802E1C370B79006E2605 /* NGClockManager.m */,
 				B16F967918B68A82008A6A58 /* Images.xcassets */,
 				B190141E168F015100B5E183 /* Supporting Files */,
 			);
@@ -295,7 +305,9 @@
 				B1901428168F015200B5E183 /* NGAppDelegate.m in Sources */,
 				B1253C231C34415600F98799 /* NGAlarmsTableViewController.m in Sources */,
 				B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */,
+				B17D802F1C370B79006E2605 /* NGClockManager.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
+				B17D802C1C370634006E2605 /* NGClock.m in Sources */,
 				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
 				B161AF85182F7BC400611941 /* NGClockView.m in Sources */,
 			);
