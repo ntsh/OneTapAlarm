@@ -7,7 +7,6 @@
 //
 
 #import "NGAppDelegate.h"
-#import <Parse/Parse.h>
 #import "NGTime.h"
 
 @implementation NGAppDelegate
@@ -19,7 +18,7 @@
     if(notification) {
         [self trackNotification:notification];
     } else {
-        [self parseAppLaunch:launchOptions];
+        //[self parseAppLaunch:launchOptions];
     }
     return YES;
 }
@@ -72,16 +71,6 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
     NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
     NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
-    [Parse setApplicationId:applicationId clientKey:clientKey];
-    [PFAnalytics trackEvent:@"Alarm" dimensions:dict];
-}
-
-- (void)parseAppLaunch :(NSDictionary *)launchOptions{
-    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
-    NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
-    NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
-    [Parse setApplicationId:applicationId clientKey:clientKey];
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 }
 
 @end

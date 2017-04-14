@@ -34,7 +34,6 @@
 		B1901437168F015200B5E183 /* NGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1901436168F015200B5E183 /* NGViewController.m */; };
 		B190143E168F082500B5E183 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190143D168F082500B5E183 /* QuartzCore.framework */; };
 		B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A49AC218B538FC000F1C72 /* CRToast.m */; };
-		B1CAEF5518D4A9C5007FD8B6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF5418D4A9C4007FD8B6 /* Parse.framework */; };
 		B1CAEF5718D4ACCC007FD8B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF5618D4ACCC007FD8B6 /* AudioToolbox.framework */; };
 		B1CAEF5918D4ACD7007FD8B6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF5818D4ACD7007FD8B6 /* CFNetwork.framework */; };
 		B1CAEF5B18D4ACEE007FD8B6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF5A18D4ACEE007FD8B6 /* CoreLocation.framework */; };
@@ -116,7 +115,6 @@
 				B1CAEF5718D4ACCC007FD8B6 /* AudioToolbox.framework in Frameworks */,
 				B1901418168F015100B5E183 /* UIKit.framework in Frameworks */,
 				B190141A168F015100B5E183 /* Foundation.framework in Frameworks */,
-				B1CAEF5518D4A9C5007FD8B6 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +375,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "45FEF00C-C7D1-4F74-8BD3-2F4016D9FDE4";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
