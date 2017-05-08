@@ -44,7 +44,19 @@
 		B1CAEF6518D4AD2E007FD8B6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */; };
 		B1CAEF6718D4B898007FD8B6 /* parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1CAEF6618D4B898007FD8B6 /* parse.plist */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
+		CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */; };
+		CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A31EBE26540083C45F /* NGTimeTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD6CE39E1EBE25040083C45F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B190140A168F015100B5E183 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1901412168F015100B5E183;
+			remoteInfo = OneTapAlarm;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B121EE7616B02E0400E739AC /* background i5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background i5.png"; sourceTree = "<group>"; };
@@ -96,6 +108,10 @@
 		B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B1CAEF6618D4B898007FD8B6 /* parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parse.plist; sourceTree = "<group>"; };
 		B1FB3B501694199C00B86EB0 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		CD6CE3991EBE25030083C45F /* OneTapAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneTapAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTapAlarmTests.m; sourceTree = "<group>"; };
+		CD6CE39D1EBE25040083C45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6CE3A31EBE26540083C45F /* NGTimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTimeTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +134,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD6CE3961EBE25030083C45F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +149,7 @@
 			children = (
 				B1A49AC018B538FC000F1C72 /* CRToast */,
 				B190141D168F015100B5E183 /* OneTapAlarm */,
+				CD6CE39A1EBE25040083C45F /* OneTapAlarmTests */,
 				B1901416168F015100B5E183 /* Frameworks */,
 				B1901414168F015100B5E183 /* Products */,
 			);
@@ -135,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B1901413168F015100B5E183 /* OneTapAlarm.app */,
+				CD6CE3991EBE25030083C45F /* OneTapAlarmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +241,16 @@
 			path = CRToast;
 			sourceTree = "<group>";
 		};
+		CD6CE39A1EBE25040083C45F /* OneTapAlarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD6CE39D1EBE25040083C45F /* Info.plist */,
+				CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */,
+				CD6CE3A31EBE26540083C45F /* NGTimeTests.m */,
+			);
+			path = OneTapAlarmTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +271,24 @@
 			productReference = B1901413168F015100B5E183 /* OneTapAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CD6CE3981EBE25030083C45F /* OneTapAlarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6CE3A21EBE25040083C45F /* Build configuration list for PBXNativeTarget "OneTapAlarmTests" */;
+			buildPhases = (
+				CD6CE3951EBE25030083C45F /* Sources */,
+				CD6CE3961EBE25030083C45F /* Frameworks */,
+				CD6CE3971EBE25030083C45F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD6CE39F1EBE25040083C45F /* PBXTargetDependency */,
+			);
+			name = OneTapAlarmTests;
+			productName = OneTapAlarmTests;
+			productReference = CD6CE3991EBE25030083C45F /* OneTapAlarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -248,6 +301,11 @@
 				TargetAttributes = {
 					B1901412168F015100B5E183 = {
 						DevelopmentTeam = MN36AT8M6S;
+					};
+					CD6CE3981EBE25030083C45F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = B1901412168F015100B5E183;
 					};
 				};
 			};
@@ -264,6 +322,7 @@
 			projectRoot = "";
 			targets = (
 				B1901412168F015100B5E183 /* OneTapAlarm */,
+				CD6CE3981EBE25030083C45F /* OneTapAlarmTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,6 +351,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD6CE3971EBE25030083C45F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -311,7 +377,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CD6CE3951EBE25030083C45F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */,
+				CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD6CE39F1EBE25040083C45F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1901412168F015100B5E183 /* OneTapAlarm */;
+			targetProxy = CD6CE39E1EBE25040083C45F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1901420168F015100B5E183 /* InfoPlist.strings */ = {
@@ -423,6 +506,80 @@
 			};
 			name = Release;
 		};
+		CD6CE3A01EBE25040083C45F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = OneTapAlarmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = in.ntsh.OneTapAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneTapAlarm.app/OneTapAlarm";
+			};
+			name = Debug;
+		};
+		CD6CE3A11EBE25040083C45F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = OneTapAlarmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = in.ntsh.OneTapAlarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneTapAlarm.app/OneTapAlarm";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +600,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CD6CE3A21EBE25040083C45F /* Build configuration list for PBXNativeTarget "OneTapAlarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6CE3A01EBE25040083C45F /* Debug */,
+				CD6CE3A11EBE25040083C45F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

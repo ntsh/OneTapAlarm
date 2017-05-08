@@ -8,7 +8,7 @@
 
 #import "NGViewController.h"
 #import "NGClock.h"
-#import "NGClockManager.h"
+//#import "NGClockManager.h"
 
 @interface NGViewController ()
 @property (strong, nonatomic) IBOutlet NGClockView *clockV;
@@ -32,8 +32,6 @@ UIView *golaParent;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self setAppAtOldAlarm];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -42,6 +40,7 @@ UIView *golaParent;
     textColor = [UIColor colorWithRed:0.5255 green:0.255 blue:0.255 alpha:1.0];
     [self setBackground];
     [self addClock];
+    [self setAppAtOldAlarm];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,11 +81,11 @@ UIView *golaParent;
 }
 
 - (void)setAlarmAtTime:(NGTime*)alarmTime {
-    NGClock *clock = [NGClock new];
+    /*NGClock *clock = [NGClock new];
     clock.alarmTime = alarmTime;
     clock.clockId = 1;
     clock.status = 1;
-    [NGClockManager saveClock:clock];
+    [NGClockManager saveClock:clock];*/
     NGTime *now = [[NGTime alloc]initWithCurrentTime];
     int nowSeconds = [now getSecondsFrom12];
     int alarmSeconds = [alarmTime getSecondsFrom12];
