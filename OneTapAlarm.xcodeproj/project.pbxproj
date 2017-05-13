@@ -46,6 +46,7 @@
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 		CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */; };
 		CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A31EBE26540083C45F /* NGTimeTests.m */; };
+		CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTapAlarmTests.m; sourceTree = "<group>"; };
 		CD6CE39D1EBE25040083C45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6CE3A31EBE26540083C45F /* NGTimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTimeTests.m; sourceTree = "<group>"; };
+		CD6CE3A51EC0B4920083C45F /* NGNotificationUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNotificationUtility.h; path = utilities/NGNotificationUtility.h; sourceTree = "<group>"; };
+		CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNotificationUtility.m; path = utilities/NGNotificationUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,7 @@
 		B190141D168F015100B5E183 /* OneTapAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				CD6CE3A81EC0B4AC0083C45F /* Utilities */,
 				B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */,
 				B1901426168F015200B5E183 /* NGAppDelegate.h */,
 				B1901427168F015200B5E183 /* NGAppDelegate.m */,
@@ -249,6 +253,15 @@
 				CD6CE3A31EBE26540083C45F /* NGTimeTests.m */,
 			);
 			path = OneTapAlarmTests;
+			sourceTree = "<group>";
+		};
+		CD6CE3A81EC0B4AC0083C45F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD6CE3A51EC0B4920083C45F /* NGNotificationUtility.h */,
+				CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +384,7 @@
 				B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */,
 				B17D802F1C370B79006E2605 /* NGClockManager.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
+				CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */,
 				B17D802C1C370634006E2605 /* NGClock.m in Sources */,
 				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
 				B161AF85182F7BC400611941 /* NGClockView.m in Sources */,

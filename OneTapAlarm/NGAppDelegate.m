@@ -8,6 +8,7 @@
 
 #import "NGAppDelegate.h"
 #import "NGTime.h"
+#import "NGNotificationUtility.h"
 
 @implementation NGAppDelegate
 
@@ -15,11 +16,10 @@
 {
     // Override point for customization after application launch.
     UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-    if(notification) {
-        [self trackNotification:notification];
-    } else {
-        //[self parseAppLaunch:launchOptions];
-    }
+
+
+    // request notification permission
+    [NGNotificationUtility requestNotificationPermission];
     return YES;
 }
 							
@@ -54,23 +54,11 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notif {
     NSLog(@"Local notif received");
     UIApplicationState state = [application applicationState];
-    [self trackNotification:notif];
     if(state == UIApplicationStateInactive || state == UIApplicationStateBackground){
         [application cancelAllLocalNotifications];
-        NSLog(@"App inactive or background");
+        NSLog(@"App inactive or background - Notif tapped");
     }
     return;
-}
-
-- (void)trackNotification :(UILocalNotification*)notification {
-    NGTime *fireTime = [[NGTime alloc] initWithTime:notification.fireDate];
-    NSDictionary *dict = @{@"Status" : @"Fired"};
-        //[dict setValue:[fireTime getTime] forKey:@"fireTime"];
-    NSLog(@"Notification fired at date: %@", [fireTime getTime]);
-
-    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"plist"]];
-    NSString *applicationId = [dictionary objectForKey:@"parseApplicationId"];
-    NSString *clientKey = [dictionary objectForKey:@"parseClientKey"];
 }
 
 @end

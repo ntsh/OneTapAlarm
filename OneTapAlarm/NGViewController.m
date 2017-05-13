@@ -9,6 +9,7 @@
 #import "NGViewController.h"
 #import "NGClock.h"
 //#import "NGClockManager.h"
+#import "NGNotificationUtility.h"
 
 @interface NGViewController ()
 @property (strong, nonatomic) IBOutlet NGClockView *clockV;
@@ -41,6 +42,7 @@ UIView *golaParent;
     [self setBackground];
     [self addClock];
     [self setAppAtOldAlarm];
+    NSLog(@"Notif permit: %d", [NGNotificationUtility hasNotificationPermission]);
 }
 
 - (void)didReceiveMemoryWarning
