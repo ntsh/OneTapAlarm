@@ -10,8 +10,9 @@
 #import "NGClock.h"
 //#import "NGClockManager.h"
 #import "NGNotificationUtility.h"
+#import <AudioToolbox/AudioServices.h>
 
-@interface NGViewController ()
+@interface NGViewController () <UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet NGClockView *clockV;
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
 @property (weak, nonatomic) IBOutlet UISwitch *alarmStatus;
@@ -28,6 +29,7 @@ UIImageView *clockView;
 UILabel *timeLabel;
 UIColor *textColor;
 UIView *golaParent;
+SystemSoundID alarmSoundId;
 
 - (void)viewDidLoad
 {
@@ -49,6 +51,15 @@ UIView *golaParent;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)didReceiveLocalNotification:(NSString *)notifText {
+    [self triggerAlarmAlert:notifText];
+    [self triggerAlarmSound];
+}
+
+- (void)didTapOnLocalNotification:(NSString *)notifText {
+    [_alarmStatus setOn:NO];
 }
 
 - (void)setBackground {
@@ -95,13 +106,13 @@ UIView *golaParent;
     if (secondsRemain < 0) {
         secondsRemain += 60 * 60 * 12;
     }
-        //secondsRemain = 10;
+    //secondsRemain = 10; // for quick testing
     NSDate *testDate = [[NSDate alloc] initWithTimeIntervalSinceNow:secondsRemain];
     UILocalNotification *notification = [[UILocalNotification alloc]init];
     notification.fireDate = testDate;
     notification.alertBody = @"Time to wake up!!";
     notification.soundName = @"alarm_long.mp3";
-        //notification.alertAction = @"Cancel Alarm";
+    notification.alertAction = @"Stop Alarm";
 
     [self clearAnyPendingAlarms];
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
@@ -165,6 +176,29 @@ UIView *golaParent;
         return TRUE;
     }
     return FALSE;
+}
+
+- (void)triggerAlarmSound {
+    NSString *soundFile = [[NSBundle mainBundle]
+                            pathForResource:@"alarm_long" ofType:@"mp3"];
+    NSURL *soundFileUrl = [NSURL fileURLWithPath:soundFile];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundFileUrl,
+                                     &alarmSoundId);
+    AudioServicesPlaySystemSound(alarmSoundId);
+}
+
+- (void)triggerAlarmAlert:(NSString *)alarmText {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm"
+                                                    message:alarmText
+                                                   delegate:self
+                                          cancelButtonTitle:@"Stop"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    AudioServicesDisposeSystemSoundID(alarmSoundId);
+    [_alarmStatus setOn:NO animated:YES];
 }
 
 @end

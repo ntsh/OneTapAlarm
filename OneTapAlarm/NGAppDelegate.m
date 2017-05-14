@@ -9,6 +9,7 @@
 #import "NGAppDelegate.h"
 #import "NGTime.h"
 #import "NGNotificationUtility.h"
+#import "NGViewController.h"
 
 @implementation NGAppDelegate
 
@@ -52,11 +53,17 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notif {
-    NSLog(@"Local notif received");
+    [application cancelAllLocalNotifications];
+    NGViewController* rootVC = (NGViewController *)[self.window rootViewController];
+
     UIApplicationState state = [application applicationState];
     if(state == UIApplicationStateInactive || state == UIApplicationStateBackground){
-        [application cancelAllLocalNotifications];
         NSLog(@"App inactive or background - Notif tapped");
+        [rootVC didTapOnLocalNotification:notif.alertBody];
+    } else if(state == UIApplicationStateActive) {
+        NSLog(@"App active - Local Notification received");
+        // Notify the view controller about notification
+        [rootVC didReceiveLocalNotification:notif.alertBody];
     }
     return;
 }

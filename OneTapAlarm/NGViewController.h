@@ -14,7 +14,8 @@
 
 @interface NGViewController : UIViewController
 
--(void) handleTouch:(CGPoint)touchLocation;
 -(void) handleTouchClock:(NGClockView*)clockView;
+-(void) didReceiveLocalNotification:(NSString *)notifText;
+-(void) didTapOnLocalNotification:(NSString *)notifText;
 
 @end
