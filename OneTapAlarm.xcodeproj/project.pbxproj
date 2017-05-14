@@ -46,6 +46,7 @@
 		B1CAEF6718D4B898007FD8B6 /* parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1CAEF6618D4B898007FD8B6 /* parse.plist */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 		BC234A9F458AB13FEEB34BC3 /* libPods-OneTapAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA140406D5B233F815E9BB2D /* libPods-OneTapAlarm.a */; };
+		CD21B1701EC904B900AD4F6D /* flurry-config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD21B16F1EC904B900AD4F6D /* flurry-config.plist */; };
 		CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */; };
 		CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A31EBE26540083C45F /* NGTimeTests.m */; };
 		CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */; };
@@ -116,6 +117,7 @@
 		B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B1CAEF6618D4B898007FD8B6 /* parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parse.plist; sourceTree = "<group>"; };
 		B1FB3B501694199C00B86EB0 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		CD21B16F1EC904B900AD4F6D /* flurry-config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "flurry-config.plist"; sourceTree = "<group>"; };
 		CD6CE3991EBE25030083C45F /* OneTapAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneTapAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTapAlarmTests.m; sourceTree = "<group>"; };
 		CD6CE39D1EBE25040083C45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		B190141E168F015100B5E183 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD21B16F1EC904B900AD4F6D /* flurry-config.plist */,
 				B1CAEF6618D4B898007FD8B6 /* parse.plist */,
 				B16F967518B65DA3008A6A58 /* Default-568h@2x.png */,
 				B16F967318B650B4008A6A58 /* alarm_long.mp3 */,
@@ -393,6 +396,7 @@
 				B18821C618472C2A002AEBD9 /* alarm.mp3 in Resources */,
 				B1287A4818AC0E0B001A44F4 /* Default-568@2x.png in Resources */,
 				B1287A4618AC0983001A44F4 /* Icon-60@2x.png in Resources */,
+				CD21B1701EC904B900AD4F6D /* flurry-config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
