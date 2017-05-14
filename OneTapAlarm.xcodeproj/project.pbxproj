@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		777C701348B8A32859B5C8C8 /* libPods-OneTapAlarmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD130607790CFC496161722E /* libPods-OneTapAlarmTests.a */; };
 		B121EE7A16B02E0400E739AC /* background i5.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7616B02E0400E739AC /* background i5.png */; };
 		B121EE7B16B02E0400E739AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7716B02E0400E739AC /* background.png */; };
 		B121EE7D16B02E0400E739AC /* gola.png in Resources */ = {isa = PBXBuildFile; fileRef = B121EE7916B02E0400E739AC /* gola.png */; };
@@ -44,6 +45,7 @@
 		B1CAEF6518D4AD2E007FD8B6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CAEF6418D4AD2E007FD8B6 /* SystemConfiguration.framework */; };
 		B1CAEF6718D4B898007FD8B6 /* parse.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1CAEF6618D4B898007FD8B6 /* parse.plist */; };
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
+		BC234A9F458AB13FEEB34BC3 /* libPods-OneTapAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA140406D5B233F815E9BB2D /* libPods-OneTapAlarm.a */; };
 		CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */; };
 		CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A31EBE26540083C45F /* NGTimeTests.m */; };
 		CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */; };
@@ -60,6 +62,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05FBB34BD300EDAD29CCE185 /* Pods-OneTapAlarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneTapAlarm.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneTapAlarm/Pods-OneTapAlarm.release.xcconfig"; sourceTree = "<group>"; };
+		1973B058DA77F357E6E960C9 /* Pods-OneTapAlarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneTapAlarm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneTapAlarm/Pods-OneTapAlarm.debug.xcconfig"; sourceTree = "<group>"; };
+		1CB05ADBDFDEDF7941DE7FB0 /* Pods-OneTapAlarmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneTapAlarmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneTapAlarmTests/Pods-OneTapAlarmTests.release.xcconfig"; sourceTree = "<group>"; };
+		A1628060FC4625CC3C14B270 /* Pods-OneTapAlarmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneTapAlarmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneTapAlarmTests/Pods-OneTapAlarmTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD130607790CFC496161722E /* libPods-OneTapAlarmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneTapAlarmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B121EE7616B02E0400E739AC /* background i5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background i5.png"; sourceTree = "<group>"; };
 		B121EE7716B02E0400E739AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		B121EE7916B02E0400E739AC /* gola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gola.png; sourceTree = "<group>"; };
@@ -115,6 +122,7 @@
 		CD6CE3A31EBE26540083C45F /* NGTimeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGTimeTests.m; sourceTree = "<group>"; };
 		CD6CE3A51EC0B4920083C45F /* NGNotificationUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGNotificationUtility.h; path = utilities/NGNotificationUtility.h; sourceTree = "<group>"; };
 		CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGNotificationUtility.m; path = utilities/NGNotificationUtility.m; sourceTree = "<group>"; };
+		DA140406D5B233F815E9BB2D /* libPods-OneTapAlarm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneTapAlarm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 				B1CAEF5718D4ACCC007FD8B6 /* AudioToolbox.framework in Frameworks */,
 				B1901418168F015100B5E183 /* UIKit.framework in Frameworks */,
 				B190141A168F015100B5E183 /* Foundation.framework in Frameworks */,
+				BC234A9F458AB13FEEB34BC3 /* libPods-OneTapAlarm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777C701348B8A32859B5C8C8 /* libPods-OneTapAlarmTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +165,7 @@
 				CD6CE39A1EBE25040083C45F /* OneTapAlarmTests */,
 				B1901416168F015100B5E183 /* Frameworks */,
 				B1901414168F015100B5E183 /* Products */,
+				BE7EE495A2F3B5160131D1A5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +194,8 @@
 				B1901417168F015100B5E183 /* UIKit.framework */,
 				B1901419168F015100B5E183 /* Foundation.framework */,
 				B190141B168F015100B5E183 /* CoreGraphics.framework */,
+				DA140406D5B233F815E9BB2D /* libPods-OneTapAlarm.a */,
+				AD130607790CFC496161722E /* libPods-OneTapAlarmTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,6 +258,17 @@
 			path = CRToast;
 			sourceTree = "<group>";
 		};
+		BE7EE495A2F3B5160131D1A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1973B058DA77F357E6E960C9 /* Pods-OneTapAlarm.debug.xcconfig */,
+				05FBB34BD300EDAD29CCE185 /* Pods-OneTapAlarm.release.xcconfig */,
+				A1628060FC4625CC3C14B270 /* Pods-OneTapAlarmTests.debug.xcconfig */,
+				1CB05ADBDFDEDF7941DE7FB0 /* Pods-OneTapAlarmTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD6CE39A1EBE25040083C45F /* OneTapAlarmTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B190143A168F015200B5E183 /* Build configuration list for PBXNativeTarget "OneTapAlarm" */;
 			buildPhases = (
+				8943F204724D885C4283EC01 /* [CP] Check Pods Manifest.lock */,
 				B190140F168F015100B5E183 /* Sources */,
 				B1901410168F015100B5E183 /* Frameworks */,
 				B1901411168F015100B5E183 /* Resources */,
+				EC6504FFD014A81075A4685B /* [CP] Embed Pods Frameworks */,
+				AEB97F16C1A5D1FC44FAE410 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,9 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD6CE3A21EBE25040083C45F /* Build configuration list for PBXNativeTarget "OneTapAlarmTests" */;
 			buildPhases = (
+				D591FB13D14671D331C2439B /* [CP] Check Pods Manifest.lock */,
 				CD6CE3951EBE25030083C45F /* Sources */,
 				CD6CE3961EBE25030083C45F /* Frameworks */,
 				CD6CE3971EBE25030083C45F /* Resources */,
+				AD261FEFFB52AB700C1BF1D6 /* [CP] Embed Pods Frameworks */,
+				6A2E8E7D4A7D90E56C128BB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,6 +404,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A2E8E7D4A7D90E56C128BB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneTapAlarmTests/Pods-OneTapAlarmTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8943F204724D885C4283EC01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD261FEFFB52AB700C1BF1D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneTapAlarmTests/Pods-OneTapAlarmTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEB97F16C1A5D1FC44FAE410 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneTapAlarm/Pods-OneTapAlarm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D591FB13D14671D331C2439B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6504FFD014A81075A4685B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneTapAlarm/Pods-OneTapAlarm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B190140F168F015100B5E183 /* Sources */ = {
@@ -483,6 +606,7 @@
 		};
 		B190143B168F015200B5E183 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1973B058DA77F357E6E960C9 /* Pods-OneTapAlarm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -504,6 +628,7 @@
 		};
 		B190143C168F015200B5E183 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FBB34BD300EDAD29CCE185 /* Pods-OneTapAlarm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -525,6 +650,7 @@
 		};
 		CD6CE3A01EBE25040083C45F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1628060FC4625CC3C14B270 /* Pods-OneTapAlarmTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -561,6 +687,7 @@
 		};
 		CD6CE3A11EBE25040083C45F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB05ADBDFDEDF7941DE7FB0 /* Pods-OneTapAlarmTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
