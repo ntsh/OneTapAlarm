@@ -103,7 +103,7 @@ SystemSoundID alarmSoundId;
     int nowSeconds = [now getSecondsFrom12];
     int alarmSeconds = [alarmTime getSecondsFrom12];
     int secondsRemain = alarmSeconds - nowSeconds;
-    if (secondsRemain < 0) {
+    while (secondsRemain <= 0) {
         secondsRemain += 60 * 60 * 12;
     }
     //secondsRemain = 10; // for quick testing
