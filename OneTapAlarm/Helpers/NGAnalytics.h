@@ -10,4 +10,10 @@
 
 @interface NGAnalytics : NSObject
 
++ (void)initializeAnalytics;
+
++ (void)trackAlarmTriggered;
+
++ (void)trackAlarmStopped;
+
 @end

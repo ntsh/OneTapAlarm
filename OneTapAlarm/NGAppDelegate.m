@@ -10,14 +10,20 @@
 #import "NGTime.h"
 #import "NGNotificationUtility.h"
 #import "NGViewController.h"
+#import "NGAnalytics.h"
 
 @implementation NGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initialize Analytics
+    [NGAnalytics initializeAnalytics];
+
     // Override point for customization after application launch.
     UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-
+    if (notification) {
+        [NGAnalytics trackAlarmTriggered];
+    }
 
     // request notification permission
     [NGNotificationUtility requestNotificationPermission];
@@ -65,6 +71,10 @@
         // Notify the view controller about notification
         [rootVC didReceiveLocalNotification:notif.alertBody];
     }
+
+    // Track alarm triggered event on Analytics
+    [NGAnalytics trackAlarmTriggered];
+
     return;
 }
 

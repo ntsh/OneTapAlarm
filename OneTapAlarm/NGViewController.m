@@ -10,6 +10,8 @@
 #import "NGClock.h"
 //#import "NGClockManager.h"
 #import "NGNotificationUtility.h"
+#import "NGAnalytics.h"
+
 #import <AudioToolbox/AudioServices.h>
 
 @interface NGViewController () <UIAlertViewDelegate>
@@ -199,6 +201,8 @@ SystemSoundID alarmSoundId;
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     AudioServicesDisposeSystemSoundID(alarmSoundId);
     [_alarmStatus setOn:NO animated:YES];
+
+    [NGAnalytics trackAlarmStopped];
 }
 
 @end

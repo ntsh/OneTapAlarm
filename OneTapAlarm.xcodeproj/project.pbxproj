@@ -47,6 +47,7 @@
 		B1FB3B511694199C00B86EB0 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B1FB3B501694199C00B86EB0 /* sun.png */; };
 		BC234A9F458AB13FEEB34BC3 /* libPods-OneTapAlarm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA140406D5B233F815E9BB2D /* libPods-OneTapAlarm.a */; };
 		CD21B1701EC904B900AD4F6D /* flurry-config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD21B16F1EC904B900AD4F6D /* flurry-config.plist */; };
+		CD21B1741EC906E600AD4F6D /* NGAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = CD21B1731EC906E600AD4F6D /* NGAnalytics.m */; };
 		CD6CE39C1EBE25040083C45F /* OneTapAlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */; };
 		CD6CE3A41EBE26540083C45F /* NGTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A31EBE26540083C45F /* NGTimeTests.m */; };
 		CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6CE3A61EC0B4920083C45F /* NGNotificationUtility.m */; };
@@ -118,6 +119,8 @@
 		B1CAEF6618D4B898007FD8B6 /* parse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = parse.plist; sourceTree = "<group>"; };
 		B1FB3B501694199C00B86EB0 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		CD21B16F1EC904B900AD4F6D /* flurry-config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "flurry-config.plist"; sourceTree = "<group>"; };
+		CD21B1721EC906E600AD4F6D /* NGAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGAnalytics.h; path = Helpers/NGAnalytics.h; sourceTree = "<group>"; };
+		CD21B1731EC906E600AD4F6D /* NGAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGAnalytics.m; path = Helpers/NGAnalytics.m; sourceTree = "<group>"; };
 		CD6CE3991EBE25030083C45F /* OneTapAlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneTapAlarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6CE39B1EBE25040083C45F /* OneTapAlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTapAlarmTests.m; sourceTree = "<group>"; };
 		CD6CE39D1EBE25040083C45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,6 +208,7 @@
 		B190141D168F015100B5E183 /* OneTapAlarm */ = {
 			isa = PBXGroup;
 			children = (
+				CD21B1711EC906B400AD4F6D /* Helpers */,
 				CD6CE3A81EC0B4AC0083C45F /* Utilities */,
 				B16F967718B689C1008A6A58 /* MainStoryboard.storyboard */,
 				B1901426168F015200B5E183 /* NGAppDelegate.h */,
@@ -270,6 +274,15 @@
 				1CB05ADBDFDEDF7941DE7FB0 /* Pods-OneTapAlarmTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD21B1711EC906B400AD4F6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD21B1721EC906E600AD4F6D /* NGAnalytics.h */,
+				CD21B1731EC906E600AD4F6D /* NGAnalytics.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		CD6CE39A1EBE25040083C45F /* OneTapAlarmTests */ = {
@@ -513,6 +526,7 @@
 				B1A49AC318B538FC000F1C72 /* CRToast.m in Sources */,
 				B17D802F1C370B79006E2605 /* NGClockManager.m in Sources */,
 				B1901437168F015200B5E183 /* NGViewController.m in Sources */,
+				CD21B1741EC906E600AD4F6D /* NGAnalytics.m in Sources */,
 				CD6CE3A71EC0B4930083C45F /* NGNotificationUtility.m in Sources */,
 				B17D802C1C370634006E2605 /* NGClock.m in Sources */,
 				B161AF82182E9E0D00611941 /* NGTime.m in Sources */,
